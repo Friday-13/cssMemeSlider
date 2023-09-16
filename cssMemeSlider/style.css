@@ -17,7 +17,6 @@ img {
 
 /* END base styles */
 
-
 /* DUMMY STYLE */
 .dummy-slide {
   width: 800px;
@@ -40,15 +39,17 @@ body {
   /* height: 80vh; */
   margin: auto;
   padding: 5vh 5vw;
-  box-shadow: .2em .2em 1em;
+  box-shadow: 0.2em 0.2em 1em;
   border-radius: 0.5em;
+}
+
+.meme-section > input[name="slider-control"] {
+  display: none;
 }
 
 .meme-section > .slider {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  /* align-items: center; */
   overflow: hidden;
 }
 
@@ -67,23 +68,40 @@ body {
 }
 
 .slider > .controls {
-  display:  flex;
+  display: flex;
   margin: 0 auto 0;
-  gap: 1em;
+  gap: 0.5em;
 }
 
-#slide0:checked~.slider>.slides {
+.controls > .control-area {
+  width: 2em;
+  height: 2em;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.control-area > .control {
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: navy;
+}
+
+/* Switching slides */
+#slide0:checked ~ .slider > .slides {
   margin-left: 0;
 }
-#slide1:checked~.slider>.slides {
+#slide1:checked ~ .slider > .slides {
   margin-left: calc(-70vw - 1em);
 }
-#slide2:checked~.slider>.slides {
+#slide2:checked ~ .slider > .slides {
   margin-left: calc((-70vw - 1em) * 2);
 }
-#slide3:checked~.slider>.slides {
+#slide3:checked ~ .slider > .slides {
   margin-left: calc((-70vw - 1em) * 3);
 }
-#slide4:checked~.slider>.slides {
+#slide4:checked ~ .slider > .slides {
   margin-left: calc((-70vw - 1em) * 4);
 }
+/* END Switching slides */
