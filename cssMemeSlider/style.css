@@ -99,7 +99,31 @@ body {
   height: 1em;
   border-radius: 50%;
   background-color: navy;
+  border: 2px solid navy;
 }
+
+/* Control effects */
+#slide0:checked ~ .slider [for="slide0"] > .control,
+#slide1:checked ~ .slider [for="slide1"] > .control,
+#slide2:checked ~ .slider [for="slide2"] > .control,
+#slide3:checked ~ .slider [for="slide3"] > .control,
+#slide4:checked ~ .slider [for="slide4"] > .control {
+  background-color: orange;
+}
+
+#slide0:checked ~ .slider [for="slide0"]:hover > .control,
+#slide1:checked ~ .slider [for="slide1"]:hover > .control,
+#slide2:checked ~ .slider [for="slide2"]:hover > .control,
+#slide3:checked ~ .slider [for="slide3"]:hover > .control,
+#slide4:checked ~ .slider [for="slide4"]:hover > .control {
+  border: 2px solid red;
+}
+
+.control-area:hover > .control {
+  background-color: yellow;
+  border: 2px solid yellow;
+}
+/* END Control effects */
 
 /* Switching slides */
 /* Switching images */
