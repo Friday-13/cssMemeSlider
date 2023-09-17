@@ -127,7 +127,7 @@ body > h1 {
   height: 1em;
   border-radius: 50%;
   background-color: var(--primary);
-  border: 2px solid var(--primary);
+  border: 0.15em solid var(--primary);
 }
 /* END Under slide area styling */
 
@@ -145,18 +145,18 @@ body > h1 {
 #slide2:checked ~ .slider [for="slide2"]:hover > .control,
 #slide3:checked ~ .slider [for="slide3"]:hover > .control,
 #slide4:checked ~ .slider [for="slide4"]:hover > .control {
-  border: 2px solid var(--secondary);
+  border: 0.15em solid var(--secondary);
 }
 
 .control-area:hover > .control {
   background-color: var(--secondary);
-  border: 2px solid var(--secondary);
+  border: 0.15em solid var(--secondary);
   transform: scale(0.9);
 }
 
 .control-area:active > .control {
   background-color: var(--primary-variant);
-  border: 2px solid var(--primary-variant);
+  border: 0.15em solid var(--primary-variant);
 }
 /* END Control effects */
 
