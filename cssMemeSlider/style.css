@@ -5,7 +5,7 @@ html {
 }
 
 img {
-  width: 70vw;
+  width: 30vw;
   /* height: 70vh; */
 }
 
@@ -47,7 +47,7 @@ body {
   display: none;
 }
 
-.meme-section > .slider {
+.slide-window {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -60,13 +60,22 @@ body {
   justify-content: space-between;
 }
 
-.slider > .slides,
+.slide-window > .slides,
 .caption-window > .slide-captions {
   display: flex;
   flex-direction: row;
   gap: 1em;
   margin-left: 0;
   transition: margin-left 1s;
+}
+
+.slide-window {
+  width: 30vw;
+  margin: auto;
+}
+
+.slide-wrapper {
+  margin: auto;
 }
 
 .underslide-area > .caption-window {
@@ -132,20 +141,20 @@ body {
 
 /* Switching slides */
 /* Switching images */
-#slide0:checked ~ .slider > .slides {
+#slide0:checked ~ .slider .slides {
   margin-left: 0;
 }
-#slide1:checked ~ .slider > .slides {
-  margin-left: calc(-70vw - 1em);
+#slide1:checked ~ .slider .slides {
+  margin-left: calc(-30vw - 1em);
 }
-#slide2:checked ~ .slider > .slides {
-  margin-left: calc((-70vw - 1em) * 2);
+#slide2:checked ~ .slider .slides {
+  margin-left: calc((-30vw - 1em) * 2);
 }
-#slide3:checked ~ .slider > .slides {
-  margin-left: calc((-70vw - 1em) * 3);
+#slide3:checked ~ .slider .slides {
+  margin-left: calc((-30vw - 1em) * 3);
 }
-#slide4:checked ~ .slider > .slides {
-  margin-left: calc((-70vw - 1em) * 4);
+#slide4:checked ~ .slider .slides {
+  margin-left: calc((-30vw - 1em) * 4);
 }
 
 /* Switching captions */
