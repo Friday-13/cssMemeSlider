@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'Jura';
+  font-family: "Jura";
   src: url(assets/fonts/Jura-Regular.ttf);
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Jura';
+  font-family: "Jura";
   src: url(assets/fonts/Jura-Bold.ttf);
   font-weight: 700;
 }
@@ -35,9 +35,9 @@ img {
 }
 
 /* END base styles */
-
+/* Section */
 body {
-  font-family: 'Jura';
+  font-family: "Jura";
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -61,18 +61,14 @@ body > h1 {
 .meme-section > input[name="slider-control"] {
   display: none;
 }
+/* END Section*/
 
+/* Slide image area */
 .slide-window {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   gap: 1em;
-}
-
-.slider > .underslide-area {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 .slide-window > .slides,
@@ -91,6 +87,14 @@ body > h1 {
 
 .slide-wrapper {
   margin: auto;
+}
+/* END slide image area */
+
+/* Under slide area styling */
+.slider > .underslide-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .underslide-area > .caption-window {
@@ -125,6 +129,7 @@ body > h1 {
   background-color: var(--primary);
   border: 2px solid var(--primary);
 }
+/* END Under slide area styling */
 
 /* Control effects */
 #slide0:checked ~ .slider [for="slide0"] > .control,
