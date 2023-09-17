@@ -15,6 +15,14 @@ img {
   padding: 0;
 }
 
+:root {
+  --background: #121212;
+  --primary: #bb86fc;
+  --primary-variant: #3700b3;
+  --secondary: #03dac6;
+  --on-background: #ffffff;
+}
+
 /* END base styles */
 
 /* DUMMY STYLE */
@@ -31,7 +39,14 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-color: var(--background);
+  color: var(--on-background);
   /* width: 100vw; */
+}
+
+body > h1 {
+  text-align: center;
+  margin: 1vh 0;
 }
 
 .meme-section {
@@ -107,8 +122,8 @@ body {
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  background-color: navy;
-  border: 2px solid navy;
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
 }
 
 /* Control effects */
@@ -117,7 +132,7 @@ body {
 #slide2:checked ~ .slider [for="slide2"] > .control,
 #slide3:checked ~ .slider [for="slide3"] > .control,
 #slide4:checked ~ .slider [for="slide4"] > .control {
-  background-color: orange;
+  background-color: var(--background);
 }
 
 #slide0:checked ~ .slider [for="slide0"]:hover > .control,
@@ -125,17 +140,18 @@ body {
 #slide2:checked ~ .slider [for="slide2"]:hover > .control,
 #slide3:checked ~ .slider [for="slide3"]:hover > .control,
 #slide4:checked ~ .slider [for="slide4"]:hover > .control {
-  border: 2px solid red;
+  border: 2px solid var(--secondary);
 }
 
 .control-area:hover > .control {
-  background-color: yellow;
-  border: 2px solid yellow;
+  background-color: var(--secondary);
+  border: 2px solid var(--secondary);
+  transform: scale(0.9);
 }
 
 .control-area:active > .control {
-  background-color: red;
-  border: 2px solid red;
+  background-color: var(--primary-variant);
+  border: 2px solid var(--primary-variant);
 }
 /* END Control effects */
 
