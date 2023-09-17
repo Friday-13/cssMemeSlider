@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>cssMemeSlider</title>
+  <link rel="stylesheet" href="style.css" media="all">
+</head>
+
+<body>
+  <h1>Meme slider</h1>
+  <section class="meme-section">
+    <!-- Hiiden radio-buttons -->
+    <input id="slide0" type="radio" name="slider-control" checked>
+    <input id="slide1" type="radio" name="slider-control">
+    <input id="slide2" type="radio" name="slider-control">
+    <input id="slide3" type="radio" name="slider-control">
+    <input id="slide4" type="radio" name="slider-control">
+    <!-- All slider elements -->
+    <div class="slider">
+      <!-- Slider images -->
+      <div class="slide-window">
+        <div class="slides">
+          <div class="slide-wrapper">
+            <div class="slide">
+              <img src="./assets/meme_0.jpg" alt="meme 0">
+            </div>
+          </div>
+          <div class="slide-wrapper">
+            <div class="slide">
+              <img src="./assets/meme_1.jpg" alt="meme 1">
+            </div>
+          </div>
+          <div class="slide-wrapper">
+            <div class="slide">
+              <img src="./assets/meme_2.jpg" alt="meme 2">
+            </div>
+          </div>
+          <div class="slide-wrapper">
+            <div class="slide">
+              <img src="./assets/meme_4.jpg" alt="meme 3">
+            </div>
+          </div>
+          <div class="slide-wrapper">
+            <div class="slide">
+              <img src="./assets/meme_5.jpg" alt="meme 4">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Area under slide -->
+      <div class="underslide-area">
+        <!-- Captions -->
+        <div class="caption-window">
+          <div class="slide-captions">
+            <div class="caption-wrapper">
+              <div class="slide-caption">
+                Where're the memes???
+              </div>
+            </div>
+            <div class="caption-wrapper">
+              <div class="slide-caption">
+                Conservation of energy
+              </div>
+            </div>
+            <div class="caption-wrapper">
+              <div class="slide-caption">
+                A small Khajiit cat
+              </div>
+            </div>
+            <div class="caption-wrapper">
+              <div class="slide-caption">
+                margin-bottom
+              </div>
+            </div>
+            <div class="caption-wrapper">
+              <div class="slide-caption">
+                There isn't a plan in general
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Styled controls for switching memes -->
+        <div class="controls">
+          <label class="control-area" for="slide0">
+            <div class="control"></div>
+          </label>
+          <label class="control-area" for="slide1">
+            <div class="control"></div>
+          </label>
+          <label class="control-area" for="slide2">
+            <div class="control"></div>
+          </label>
+          <label class="control-area" for="slide3">
+            <div class="control"></div>
+          </label>
+          <label class="control-area" for="slide4">
+            <div class="control"></div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

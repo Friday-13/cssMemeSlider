@@ -1,0 +1,212 @@
+@font-face {
+  font-family: "Jura";
+  src: url(assets/fonts/Jura-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Jura";
+  src: url(assets/fonts/Jura-Bold.ttf);
+  font-weight: 700;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+img {
+  width: 30vw;
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background: #121212;
+  --primary: #bb86fc;
+  --primary-variant: #3700b3;
+  --secondary: #03dac6;
+  --on-background: #ffffff;
+}
+
+/* END base styles */
+/* Section */
+body {
+  font-family: "Jura";
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--on-background);
+}
+
+body > h1 {
+  text-align: center;
+  margin: 1vh 0;
+}
+
+.meme-section {
+  width: 80vw;
+  margin: auto;
+  padding: 5vh 5vw;
+  box-shadow: 0.2em 0.2em 1em;
+  border-radius: 0.5em;
+}
+
+.meme-section > input[name="slider-control"] {
+  display: none;
+}
+/* END Section*/
+
+/* Slide image area */
+.slide-window {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 1em;
+}
+
+.slide-window > .slides,
+.caption-window > .slide-captions {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  margin-left: 0;
+  transition: margin-left 1s;
+}
+
+.slide-window {
+  width: 30vw;
+  margin: auto;
+}
+
+.slide-wrapper {
+  margin: auto;
+}
+/* END slide image area */
+
+/* Under slide area styling */
+.slider > .underslide-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.underslide-area > .caption-window {
+  width: 35vw;
+  overflow: hidden;
+}
+
+.slide-captions .slide-caption {
+  font-size: 2em;
+  width: 35vw;
+}
+
+.underslide-area > .controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 0.5em;
+}
+
+.controls > .control-area {
+  width: 2em;
+  height: 2em;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.control-area > .control {
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: var(--primary);
+  border: 0.15em solid var(--primary);
+}
+/* END Under slide area styling */
+
+/* Control effects */
+#slide0:checked ~ .slider [for="slide0"] > .control,
+#slide1:checked ~ .slider [for="slide1"] > .control,
+#slide2:checked ~ .slider [for="slide2"] > .control,
+#slide3:checked ~ .slider [for="slide3"] > .control,
+#slide4:checked ~ .slider [for="slide4"] > .control {
+  background-color: var(--background);
+}
+
+#slide0:checked ~ .slider [for="slide0"]:hover > .control,
+#slide1:checked ~ .slider [for="slide1"]:hover > .control,
+#slide2:checked ~ .slider [for="slide2"]:hover > .control,
+#slide3:checked ~ .slider [for="slide3"]:hover > .control,
+#slide4:checked ~ .slider [for="slide4"]:hover > .control {
+  border: 0.15em solid var(--secondary);
+}
+
+.control-area:hover > .control {
+  background-color: var(--secondary);
+  border: 0.15em solid var(--secondary);
+  transform: scale(0.9);
+}
+
+.control-area:active > .control {
+  background-color: var(--primary-variant);
+  border: 0.15em solid var(--primary-variant);
+}
+/* END Control effects */
+
+/* Switching slides */
+/* Switching images */
+#slide0:checked ~ .slider .slides {
+  margin-left: 0;
+}
+#slide1:checked ~ .slider .slides {
+  margin-left: calc(-30vw - 1em);
+}
+#slide2:checked ~ .slider .slides {
+  margin-left: calc((-30vw - 1em) * 2);
+}
+#slide3:checked ~ .slider .slides {
+  margin-left: calc((-30vw - 1em) * 3);
+}
+#slide4:checked ~ .slider .slides {
+  margin-left: calc((-30vw - 1em) * 4);
+}
+
+/* Switching captions */
+#slide0:checked ~ .slider .slide-captions {
+  margin-left: 0;
+}
+#slide1:checked ~ .slider .slide-captions {
+  margin-left: calc(-35vw - 1em);
+}
+#slide2:checked ~ .slider .slide-captions {
+  margin-left: calc((-35vw - 1em) * 2);
+}
+#slide3:checked ~ .slider .slide-captions {
+  margin-left: calc((-35vw - 1em) * 3);
+}
+#slide4:checked ~ .slider .slide-captions {
+  margin-left: calc((-35vw - 1em) * 4);
+}
+/* END Switching slides */
+
+/* Mobile version */
+@media screen and (max-width: 768px) {
+  .slider > .underslide-area {
+    flex-direction: column-reverse;
+    gap: 1em;
+  }
+  .underslide-area {
+    align-items: center;
+  }
+  .slide-caption {
+    text-align: center;
+  }
+}
+/* END Mobile version */
