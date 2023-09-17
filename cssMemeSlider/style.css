@@ -123,6 +123,11 @@ body {
   background-color: yellow;
   border: 2px solid yellow;
 }
+
+.control-area:active > .control {
+  background-color: red;
+  border: 2px solid red;
+}
 /* END Control effects */
 
 /* Switching slides */
